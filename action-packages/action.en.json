@@ -1,0 +1,30 @@
+{
+  "actions": [
+    {
+      "name": "MAIN",
+      "intent": {
+        "name": "actions.intent.MAIN"
+      },
+      "fulfillment": {
+        "conversationName": "conv"
+      }
+    },
+    {
+      "name": "TEXT",
+      "intent": {
+        "name": "actions.intent.TEXT"
+      },
+      "fulfillment": {
+        "conversationName": "conv"
+      }
+    }
+  ],
+  "conversations": {
+    "cinetext": {
+      "name": "conv",
+      "url": "https://url",
+      "fulfillmentApiVersion": 2
+    }
+  },
+  "locale": "en"
+}

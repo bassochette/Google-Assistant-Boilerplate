@@ -1,0 +1,9 @@
+// secrets
+.env
+creds.data
+
+// node 
+node_modules
+
+// osx
+.DS_Store
