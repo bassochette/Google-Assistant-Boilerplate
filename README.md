@@ -9,6 +9,16 @@
 npm run cli
 ```
 
+## Channels
+### Discord
+
+set the DISCORD_KEY env variable
+
+```sh
+node discord/hook
+```
+
+
 ## publish action package
 ### install gactions
 
