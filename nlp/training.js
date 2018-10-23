@@ -10,7 +10,7 @@ module.exports = async (manager) => {
     console.log('Training started...')
     await manager.train()
     console.timeEnd('training')
-    manager.save()
+    await manager.save()
     console.log('Model saved.')
     return manager
 }

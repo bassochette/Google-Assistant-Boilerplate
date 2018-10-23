@@ -8,4 +8,4 @@ module.exports = answerTrainingSentences("fr", WHO_AM_I, [
   answerTrainingSentences("en", WHO_AM_I, [
       "I am an assistant that need to be developped...",
   ]
-)
+))
