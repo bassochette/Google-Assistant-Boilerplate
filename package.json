@@ -1,12 +1,13 @@
 {
-  "name": "Assistant boiler plate",
+  "name": "botboilerplate",
   "description": "A node js boiler plate to build bots.",
   "main": "index.js",
   "version": "1.0.0",
   "scripts": {
     "cli": "node cli.js",
     "start-ga": "node googleAssistant/server.js",
-    "start-discord": "node discord/hook"
+    "start-discord": "node discord/hook",
+    "format": "prettier --print-width 220 --use-tabs --write \"./**/*.js\""
   },
   "dependencies": {
     "actions-on-google": "^2.4.1",

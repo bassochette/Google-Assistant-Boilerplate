@@ -1,17 +1,16 @@
-const {NlpManager} = require('node-nlp')
-const manager = new NlpManager({languages: ['en', 'fr']})
+const { NlpManager } = require("node-nlp");
+const manager = new NlpManager({ languages: ["en", "fr"] });
 
-const training = require('./training')
+const training = require("./training");
 let brain = false;
 
 module.exports = async () => {
-    if (!brain) {
-        brain = await training(manager)
-    }
-    return brain
-}
-
+	if (!brain) {
+		brain = await training(manager);
+	}
+	return brain;
+};
 
 module.exports.startBrain = async () => {
-    brain = await training(manager)
-}
+	brain = await training(manager);
+};

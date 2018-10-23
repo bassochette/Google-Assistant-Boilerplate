@@ -1,7 +1,5 @@
-const pick = require ('../libs/pick')
+const pick = require("../libs/pick");
 module.exports = async () => {
-    // TODO: implement
-    return pick([
-        "Désolé je n'ai pas compris."
-    ])
-}
+	// TODO: implement
+	return pick(["Désolé je n'ai pas compris."]);
+};
