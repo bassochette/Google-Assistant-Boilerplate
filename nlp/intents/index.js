@@ -1,21 +1,11 @@
-const loader = require("../libs/loader");
+const { intent } = require("../db");
 
 module.exports = async manager => {
-	const trainingSets = await loader(__dirname);
-
-	for (training of trainingSets) {
-		if (!training) continue;
-		manager.addDocument(training.lang, training.data, training.intent);
-	}
-
-	const userTrainingSets = await loader(`${__dirname}/../../intents`);
-
-	for (training of userTrainingSets) {
-		if (!training) continue;
-		try {
-			manager.addDocument(training.lang, training.data, training.intent);
-		} catch (error) {
-			throw error;
+	const intents = await intent.find({});
+	console.log(intents);
+	for (training of intents) {
+		for (t of training.trainings) {
+			manager.addDocument(training.lang, t, training.name);
 		}
 	}
 

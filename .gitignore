@@ -1,8 +1,11 @@
+// model
+model.nlp
+
 // secrets
 .env
 creds.data
 
-// node 
+// node
 node_modules
 
 // osx

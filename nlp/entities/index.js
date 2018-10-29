@@ -1,8 +1,7 @@
-const loader = require("../libs/loader");
+const db = require("../db");
+
 module.exports = async manager => {
-	const entities = await loader(__dirname);
-	const userEntities = await loader(`${__dirname}/../../entities`);
-	entities.concat(userEntities);
+	const entities = await db.entity.find({});
 	for (entity of entities) {
 		if (!entity) continue;
 		manager.addNamedEntityText(entity.type, entity.name, entity.lang, entity.synonyms);

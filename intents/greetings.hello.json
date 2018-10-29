@@ -1,0 +1,11 @@
+[
+	{ "lang": "fr", "name": "greetings.hello", "data": "yo" },
+	{ "lang": "fr", "name": "greetings.hello", "data": "yopyop" },
+	{ "lang": "fr", "name": "greetings.hello", "data": "hello" },
+	{ "lang": "fr", "name": "greetings.hello", "data": "salut" },
+	{ "lang": "fr", "name": "greetings.hello", "data": "yello" },
+	{ "lang": "fr", "name": "greetings.hello", "data": "plop" },
+	{ "lang": "fr", "name": "greetings.hello", "data": "bonjour" },
+	{ "lang": "fr", "name": "greetings.hello", "data": "wesh" },
+	{ "lang": "en", "name": "greetings.hello", "data": "what's up" }
+]

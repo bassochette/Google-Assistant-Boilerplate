@@ -1,5 +1,7 @@
-const pick = require("../libs/pick");
-module.exports = async () => {
-	// TODO: implement
-	return pick(["Désolé je n'ai pas compris."]);
+module.exports = async understood => {
+	if (understood.answer) return understood.answer;
+
+	// TODO: logic to store not understood sentences
+
+	return "Not understood...";
 };

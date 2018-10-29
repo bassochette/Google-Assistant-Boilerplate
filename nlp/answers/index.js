@@ -1,12 +1,12 @@
-const loader = require("../libs/loader");
+const { answer } = require("../db");
 
 module.exports = async manager => {
-	const trainingSets = await loader(__dirname);
-	const userAnswers = await loader(`${__dirname}/../../answers`);
-	trainingSets.concat(userAnswers);
-	for (training of trainingSets) {
-		if (!training) continue;
-		manager.addAnswer(training.lang, training.intent, training.answer);
+	// db answers
+	const answers = await answer.find({});
+	for (training of answers) {
+		for (a of training.answers) {
+			manager.addAnswer(training.lang, training.intent, a);
+		}
 	}
 
 	return manager;
