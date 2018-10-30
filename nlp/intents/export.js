@@ -18,9 +18,16 @@ const fn = async () => {
 		intentMap[intent.name] = intentMap[intent.name].concat(data);
 	}
 
+	const intentIndex = {}
+
 	for (intent of Object.keys(intentMap)) {
-		await writeToFile(`${__dirname}/../../intents/${intent}.json`, JSON.stringify(intentMap[intent]));
+		let filePath = `${__dirname}/../../intents/${intent}.json`
+		await writeToFile(filePath, JSON.stringify(intentMap[intent]));
+		intentIndex[itent] = filePath
 	}
+
+	await writeToFile(`${__dirname}/../../intents/index.js`, JSON.stringify(intentMap))
+
 };
 
 fn();

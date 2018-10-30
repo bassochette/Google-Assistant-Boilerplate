@@ -8,9 +8,11 @@ mongoose.connect(
 const answer = require("./answer");
 const entity = require("./entity");
 const intent = require("./intent");
+const unkown = require("./unkown");
 
 module.exports = {
 	answer,
 	entity,
-	intent
+	intent,
+	unkown
 };
