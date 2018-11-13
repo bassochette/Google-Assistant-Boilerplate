@@ -26,4 +26,4 @@ NLP data imported:
     `);
 };
 
-fn();
+module.exports = fn;

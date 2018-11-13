@@ -7,7 +7,6 @@ const rl = readline.createInterface({
 });
 
 const main = async () => {
-	await require("./nlp").startBrain();
 	rl.on("line", async message => {
 		const response = await bot(message);
 		console.log(response);

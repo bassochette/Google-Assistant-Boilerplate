@@ -6,5 +6,6 @@ module.exports = async manager => {
 		if (!entity) continue;
 		manager.addNamedEntityText(entity.type, entity.name, entity.lang, entity.synonyms);
 	}
+
 	return manager;
 };

@@ -1,6 +1,3 @@
-// model
-model.nlp
-
 // secrets
 .env
 creds.data

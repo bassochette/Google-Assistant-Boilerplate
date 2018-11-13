@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const config = require("../../config");
+console.log('connecting to mongo > ', config.mongo)
 mongoose.connect(
 	config.mongo,
 	{ useNewUrlParser: true }

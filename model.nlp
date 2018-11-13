@@ -1,0 +1,388 @@
+{
+  "settings": {
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "fullSearchWhenGuessed": true,
+    "useNlg": true
+  },
+  "languages": [
+    "en",
+    "fr"
+  ],
+  "intentDomains": {
+    "greetings.bye": "default",
+    "greetings.hello": "default"
+  },
+  "nerManager": {
+    "settings": {},
+    "threshold": 0.8,
+    "builtins": [
+      "Number",
+      "Ordinal",
+      "Percentage",
+      "Age",
+      "Currency",
+      "Dimension",
+      "Temperature",
+      "DateTime",
+      "PhoneNumber",
+      "IpAddress",
+      "Boolean",
+      "Email",
+      "Hashtag",
+      "URL"
+    ],
+    "namedEntities": {
+      "city": {
+        "type": "enum",
+        "name": "city",
+        "localeFallback": {
+          "*": "en"
+        },
+        "locales": {
+          "fr": {
+            "Rennes": [
+              "Rennes",
+              "renne",
+              "rohazon",
+              "Rohazon",
+              "Rennes",
+              "renne",
+              "rohazon",
+              "Rohazon"
+            ],
+            "Paris": [
+              "Paris",
+              "Paname",
+              "paris",
+              "Paris",
+              "Paname",
+              "paris"
+            ],
+            "Nantes": [
+              "Nantes",
+              "nante",
+              "Nantes",
+              "nante"
+            ],
+            "Lyon": [
+              "lyon",
+              "Lyon",
+              "entre le rhône et la saone",
+              "entre le rhone et la saone",
+              "lyon",
+              "Lyon",
+              "entre le rhône et la saone",
+              "entre le rhone et la saone"
+            ],
+            "Singapour": [
+              "singapour",
+              "Singapour",
+              "singapour",
+              "Singapour"
+            ],
+            "Montréal": [
+              "Montréal",
+              "Montreal",
+              "montréal",
+              "montreal",
+              "Montréal",
+              "Montreal",
+              "montréal",
+              "montreal"
+            ],
+            "Grenoble": [
+              "Grenoble",
+              "grenoble",
+              "Grenoble",
+              "grenoble"
+            ],
+            "Lille": [
+              "Lille",
+              "lille",
+              "Lille",
+              "lille"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "slotManager": {},
+  "classifiers": [
+    {
+      "language": "en",
+      "docs": [
+        {
+          "intent": "greetings.hello",
+          "utterance": [
+            "what",
+            "s",
+            "up"
+          ]
+        }
+      ],
+      "features": {
+        "what": 1,
+        "s": 1,
+        "up": 1
+      },
+      "logistic": {
+        "observations": {
+          "greetings.hello": [
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        "labels": [
+          "greetings.hello"
+        ],
+        "observationCount": 1,
+        "theta": [
+          {
+            "elements": [
+              1.5146193936541192,
+              1.5146193936541192,
+              1.5146193936541192
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "language": "fr",
+      "docs": [
+        {
+          "intent": "greetings.bye",
+          "utterance": [
+            "au",
+            "revoir"
+          ]
+        },
+        {
+          "intent": "greetings.bye",
+          "utterance": [
+            "bye"
+          ]
+        },
+        {
+          "intent": "greetings.bye",
+          "utterance": [
+            "ciao"
+          ]
+        },
+        {
+          "intent": "greetings.bye",
+          "utterance": [
+            "cach",
+            "toi"
+          ]
+        },
+        {
+          "intent": "greetings.bye",
+          "utterance": [
+            "mon",
+            "boss",
+            "arriv"
+          ]
+        },
+        {
+          "intent": "greetings.hello",
+          "utterance": [
+            "yo"
+          ]
+        },
+        {
+          "intent": "greetings.hello",
+          "utterance": [
+            "yopyop"
+          ]
+        },
+        {
+          "intent": "greetings.hello",
+          "utterance": [
+            "hello"
+          ]
+        },
+        {
+          "intent": "greetings.hello",
+          "utterance": [
+            "salut"
+          ]
+        },
+        {
+          "intent": "greetings.hello",
+          "utterance": [
+            "yello"
+          ]
+        },
+        {
+          "intent": "greetings.hello",
+          "utterance": [
+            "plop"
+          ]
+        },
+        {
+          "intent": "greetings.hello",
+          "utterance": [
+            "bonjour"
+          ]
+        },
+        {
+          "intent": "greetings.hello",
+          "utterance": [
+            "wesh"
+          ]
+        }
+      ],
+      "features": {
+        "au": 1,
+        "revoir": 1,
+        "bye": 1,
+        "ciao": 1,
+        "cach": 1,
+        "toi": 1,
+        "mon": 1,
+        "boss": 1,
+        "arriv": 1,
+        "yo": 1,
+        "yopyop": 1,
+        "hello": 1,
+        "salut": 1,
+        "yello": 1,
+        "plop": 1,
+        "bonjour": 1,
+        "wesh": 1
+      },
+      "logistic": {
+        "observations": {
+          "greetings.bye": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7,
+              8
+            ]
+          ],
+          "greetings.hello": [
+            [
+              9
+            ],
+            [
+              10
+            ],
+            [
+              11
+            ],
+            [
+              12
+            ],
+            [
+              13
+            ],
+            [
+              14
+            ],
+            [
+              15
+            ],
+            [
+              16
+            ]
+          ]
+        },
+        "labels": [
+          "greetings.bye",
+          "greetings.hello"
+        ],
+        "observationCount": 13,
+        "theta": [
+          {
+            "elements": [
+              2.908469814068965,
+              2.908469814068965,
+              5.081290539291047,
+              5.081290539291047,
+              2.908469814068965,
+              2.908469814068965,
+              2.0791301543246337,
+              2.0791301543246337,
+              2.0791301543246337,
+              -2.472114591093531,
+              -2.472114591093531,
+              -2.472114591093531,
+              -2.472114591093531,
+              -2.472114591093531,
+              -2.472114591093531,
+              -2.472114591093531,
+              -2.472114591093531
+            ]
+          },
+          {
+            "elements": [
+              -2.9084698140689653,
+              -2.9084698140689653,
+              -5.0812905392910475,
+              -5.0812905392910475,
+              -2.9084698140689653,
+              -2.9084698140689653,
+              -2.079130154324634,
+              -2.079130154324634,
+              -2.079130154324634,
+              2.472114591093529,
+              2.472114591093529,
+              2.472114591093529,
+              2.472114591093529,
+              2.472114591093529,
+              2.472114591093529,
+              2.472114591093529,
+              2.472114591093529
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "responses": {
+    "fr": {
+      "greetings.hello": [
+        {
+          "response": "Bonjour"
+        }
+      ],
+      "greetings.bye": [
+        {
+          "response": "Á Bientôt!"
+        }
+      ]
+    },
+    "en": {
+      "greetings.bye": [
+        {
+          "response": "See you later."
+        }
+      ],
+      "greetings.hello": [
+        {
+          "response": "Hi"
+        }
+      ]
+    }
+  }
+}

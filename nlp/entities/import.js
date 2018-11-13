@@ -13,4 +13,4 @@ const fn = async () => {
 	}
 };
 
-fn();
+module.exports = fn

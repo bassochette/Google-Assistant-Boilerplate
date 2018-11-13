@@ -1,8 +1,11 @@
+const { NlpManager } = require("node-nlp");
+
 const entities = require("./entities");
 const intents = require("./intents");
 const answers = require("./answers");
 
-module.exports = async manager => {
+const training = async () => {
+	const manager = new NlpManager({ languages: ["en", "fr"] });
 	await intents(manager);
 	await entities(manager);
 	await answers(manager);
@@ -14,3 +17,17 @@ module.exports = async manager => {
 	console.log("Model saved.");
 	return manager;
 };
+
+training()
+	.then(
+		() => {
+			console.log('op success')
+			process.exit(0)
+		}
+	)
+	.catch(
+		error => {
+			console.log('error', error)
+			process.exit(1)
+		}
+	)

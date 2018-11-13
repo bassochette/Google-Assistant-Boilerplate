@@ -7,7 +7,9 @@
 		"cli": "node cli.js",
 		"start-ga": "node googleAssistant/server.js",
 		"start-discord": "node discord/hook",
-		"format": "prettier --print-width 220 --use-tabs --write '**/*.{js,json}'"
+		"format": "prettier --print-width 220 --use-tabs --write '**/*.{js,json}'",
+		"import": "node nlp/db/import.js",
+		"train": "node nlp/training.js"
 	},
 	"dependencies": {
 		"actions-on-google": "^2.4.1",
