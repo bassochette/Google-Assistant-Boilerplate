@@ -1,3 +1,9 @@
+/*
+	BE VERY CAREFUL USING THIS SCRIPT
+	local data in YOUR answers folder project will we replaced by the db
+
+	use at your own risks...
+*/
 const db = require("../db");
 const loader = require("../libs/loader");
 const writeToFile = require("../libs/writeToFile");
@@ -20,8 +26,20 @@ const fn = async () => {
 	}
 
 	for (intent of Object.keys(answerMap)) {
-		await writeToFile(`${__dirname}/../../answers/${intent}.json`, JSON.stringify(answerMap[intent]));
+		await writeToFile(`${__dirname}/../../answers/${intent}.json`, JSON.stringify(answerMap[intent], undefined, 2));
 	}
 };
 
-fn();
+fn()
+	.then(
+		() => {
+			console.log('export succesfull')
+			process.exit(0)
+		}
+	)
+	.catch(
+		error => {
+			console.log('An error occured ', error)
+			process.exit(2)
+		}
+	);

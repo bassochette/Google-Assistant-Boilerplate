@@ -1,3 +1,9 @@
+/*
+	BE VERY CAREFUL USING THIS SCRIPT
+	local data in YOUR intents folder project will we replaced by the db
+
+	use at your own risks...
+*/
 const db = require("../db");
 const loader = require("../libs/loader");
 const writeToFile = require("../libs/writeToFile");
@@ -26,8 +32,20 @@ const fn = async () => {
 		intentIndex[itent] = filePath
 	}
 
-	await writeToFile(`${__dirname}/../../intents/index.js`, JSON.stringify(intentMap))
+	await writeToFile(`${__dirname}/../../intents/index.js`, JSON.stringify(intentMap, undefined, 2))
 
 };
 
-fn();
+fn()
+	.then(
+		() => {
+			console.log('export succesfull')
+			process.exit(0)
+		}
+	)
+	.catch(
+		error => {
+			console.log('An error occured ', error)
+			process.exit(2)
+		}
+	);
