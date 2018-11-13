@@ -1,19 +1,33 @@
-
+# NLP bot boilerplate
 
 ## setup
 `npm i`
 
 ## dev
-### test the bot brain via the cli
+### import json model to db
+be careful you intents, entities and answers will be deleted from db
+```sh
+npm run import
 ```
+
+### train model from db
+
+```sh
+npm run train
+```
+
+### test the bot brain via the cli
+
+bot must be trained!
+```sh
 npm run cli
 ```
+
 
 ## Channels
 ### Discord
 
 set the DISCORD_KEY env variable
-
 ```sh
 node discord/hook
 ```
