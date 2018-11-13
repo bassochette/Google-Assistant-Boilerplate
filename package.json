@@ -2,7 +2,7 @@
 	"name": "botboilerplate",
 	"description": "A node js boiler plate to build bots.",
 	"main": "index.js",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"scripts": {
 		"cli": "node cli.js",
 		"start-ga": "node googleAssistant/server.js",
